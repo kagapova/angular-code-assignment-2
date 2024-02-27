@@ -1,0 +1,14 @@
+<div class="card-block">
+  <div class="card-block--image-block" [style.background-image]="'url('+image+')'"  >
+    <div  class="card-block--image-block--vote">{{votes}}</div>
+    <div class="card-block--image-block--points">{{points}} Б</div>
+  </div>
+  <div class="card-block--voice">
+    <img class="card-block--voice--icon" [src]="icon">
+    <p class="card-block--voice--header"
+       [style.background-color]="backgroundColor"
+       [style.color]="fontColor"
+    >{{header}}</p>
+    <p class="card-block--voice--body"></p>
+  </div>
+</div>

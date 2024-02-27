@@ -1,0 +1,21 @@
+@if(isLoading){
+<select #selectElem (change)="sortForAlias(selectElem.value)">
+@for(category of categories; track category.id){
+  <option [value]="category.id">{{category.name}}</option>
+}
+</select>
+<div class="card-list">
+@for(poll of pollListWithMeta; track poll.id){
+  <app-root-card [image]="poll.image"
+                 [icon]="poll.smallIcon"
+                 [fontColor]="poll.textColor"
+                 [votes]="poll.voters_count"
+                 [points]="poll.points"
+                 [backgroundColor]="poll.backgroundColor"
+                 [header]="poll.title"
+  ></app-root-card>
+}
+</div>
+
+}
+
